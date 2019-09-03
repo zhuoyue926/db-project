@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cy.pj.common.annotation.Cache_Find;
 import com.cy.pj.common.vo.JsonResult;
 import com.cy.pj.sys.entity.SysUser;
 import com.cy.pj.sys.service.SysUserService;
@@ -70,6 +71,7 @@ public class SysUserController {
 		return new JsonResult("save ok");
 	}
 	@RequestMapping("doFindPageObjects")
+	@Cache_Find
 	public JsonResult doFindPageObjects(
 			String username,
 			Integer pageCurrent) {
