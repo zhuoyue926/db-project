@@ -1,0 +1,141 @@
+/* Top CSS Document */
+
+a:link { text-decoration: none;}
+a:visited { text-decoration: none;}
+a:hover { text-decoration: none;}
+a:active { text-decoration: none;}
+
+body { margin:0px; font-family: Arial, "Microsoft yahei", Helvetica, Verdana, SimHei, sans-serif;}
+
+.Hand_Off { BACKGROUND-COLOR: #FFFFFFF; Text-align: center;}
+.Hand_On { border : 1px solid #999999; background-color : #; Text-align: center; cursor: pointer; HEIGHT: 16px; WIDTH: 16px;}
+.style0 { font-size: 12px; color: #333333; font-family: Arial;}
+.style1 { font-size: 12px; color: #000000;} a.style1:hover{color: #ff6600;} 
+.style2 { font-size: 12px; color: #333333;} a.style2:hover{text-decoration:none; color: #ffffff;}
+.style3 { font-size: 12px; color: #333333; font-weight: bold;}
+.style4 { font-size: 12px; color: #225ab1; font-weight: bold;}
+.style5 { font-size: 12px; color: #225ab1;}
+.style6 { color: #ff6600; font-size: 12px;}
+.style7 { font-size: 16px; color: #333333; font-weight: bold;} a.style7:hover{text-decoration:none;}
+.style8 { font-size: 14px; color: #333333; font-family: Arial;} a.style8:hover{text-decoration:none;}
+.style9 { font-size: 16px; color: #333333; font-family: Arial;}
+.style10{ font-size: 14px; color: #0e54c8;} a.style10:link,a.style10:visited{ font-size: 14px; color: #261cdc;} a.style10:hover{text-decoration:none; color: #ff0000;}
+.style11 { color: #333333; font-size:14px; font-family:Arial;} a.style11:hover{ padding-bottom:11px; border-bottom:3px #ffcc00 solid; text-decoration:none;}
+.style12 { color: #ff9900; font-size:14px; font-family: Arial;}
+.style13 { font-size: 12px; color: #ffffff; font-family: Arial;}
+.style14 { font-size: 14px; color: #ff8800; font-weight:bold;}
+.style15 { font-size: 14px; color: #ffffff; font-weight:bold;} a.style15:hover{text-decoration:none;} 
+.style16,a.style16:link,a.style16:visited{ font-size: 12px; color: #0e54c8; text-decoration:underline;} a.style16:hover{text-decoration:underline; color: #ff3300;} 
+.style17 { font-size: 14px; color: #ffffff; font-weight:bold; cursor:pointer;}a.style17:hover{text-decoration:none; color: #000000;}
+.style18 { font-size: 14px; color: #ffffff; font-family: Arial;} a.style18:hover{text-decoration:none;}
+.style19 { font-size: 28px; color: #333333; font-weight:bold;}
+.style20 { font-size: 26px; color: #225ab1; font-weight:bold;}
+.style21 { font-size: 12px; color: #5bb506;}
+.style22 { font-size: 12px; color: #ffffff; font-weight: bold;}
+.style23 { font-size: 12px; color: #666666; font-family: Arial;}
+.style24 { font-size: 12px; color: #aaaaaa;}
+.style25 { font-size: 12px; color: #999999; font-family: Arial;}
+.style26,a.style26:link,a.style26:visited{ font-size: 12px; color: #f08200; font-family: Arial; font-weight:bold;} a.style26:hover{text-decoration:underline; color: #ff5500;} 
+.style27 { font-size: 20px; color: #ff8800; font-family: Arial;}
+.style28 { font-size: 14px; color: #888888; font-family: Arial;} a.style28:hover{text-decoration:none;}
+.style29 { font-size: 12px; color: #000000;} a.style29:hover{text-decoration:none; color: #ffffff; background:#ff8800; padding:2px 2px 0px 2px;} 
+.style30 { font-size: 18px; color: #333333;}
+.style31 { font-size: 18px; color: #333333; font-family: Arial; font-weight:bold;}
+.style32 { font-size: 16px; color: #ff0000; font-family: Arial; font-weight:bold;}
+.style33 { font-size: 26px; color: #ff8800; font-family: Arial;}
+.style34 { font-size: 36px; color: #ffffff; font-family: Arial;}
+.style35 { font-size: 46px; color: #ffffff; font-family: Arial;}
+.style36 { font-size: 46px; color: #333333; font-family: Arial;}
+
+.noselect{
+	background:#;
+	color:#333333;
+	font-size:12px;
+	font-family: Arial;
+}
+.select{
+	background:#006dc8;
+	color:#ffffff;
+	font-size:12px;
+	font-family: Arial;
+}
+
+  ul,li{ margin:0px; padding:0; list-style: none;}
+  .lubo{ position:relative; width:700px; height:399px;}
+  .lubo_box{ width:700px; height:400px; }
+  .lubo_box li{ float:left; position:absolute; top:0; left:0; width:700px; height:400px; opacity:0; filter:alpha(opacity=0); display:none;}
+  .lubo_box li a{ display: block; width: 100%; height: 100%;}
+  .lubo_box li img{ width: 100%; height: 100%;}
+
+  /*Ô²µã*/
+  .cir_box{ overflow: hidden; position: absolute;}
+  .cir_box li{ float: left; width:12px; height:12px; margin:0 5px; cursor: pointer; background: #bbbbbb; border-radius:50%;}
+  .cir_on{ background: #ffcc00 !important;}
+
+  /*°´Å¥*/
+  .lubo_btn{ position: absolute; width: 100%; top: 159px;}
+  .left_btn, .right_btn{ width: 30px; height:50px; background: #666666; opacity: 0.5;filter:alpha(opacity=50); cursor: pointer; color: #ffffff; line-height:50px; font-size: 30px; text-align: center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+  .left_btn{ float: left;} .left_btn:hover{ background:#000000;}
+  .right_btn{ float: right;} .right_btn:hover{ background:#000000;}
+
+
+.hc_lnav{width:200px; }
+.hc_lnav .allbtn{height:400px;}
+.hc_lnav .allbtn ul{z-index:1; position:absolute; background-color:#333333; width:200px; display: block; height:400px; left:0px}
+body.hc_home .hc_lnav .allbtn ul{display:block}
+body.hc_list .hc_lnav .allbtn ul{display:block}
+
+.hc_lnav .allbtn ul li{padding-bottom:0px;zoom:1;clear:both;cursor:default}
+.hc_lnav .allbtn ul li .tx{padding-left:30px; color:#dddddd; font-size:14px; line-height:52px; border-bottom:1px #555555 solid; height:49px;}
+.hc_lnav .allbtn ul li .tx a{color:#ffffff;font-size:14px;}
+
+.hc_lnav .allbtn ul li dl{ padding-top:4px; zoom:1; color:#ffffff; clear:both; overflow:auto;}
+.hc_lnav .allbtn ul li dl a{float:left;color:#d9e7ce;margin-left:6px;margin-right:6px;line-height:22px;}
+.hc_lnav .allbtn ul li dt{ float:left; width:30px; }
+.hc_lnav .allbtn ul li dd{ float:left; width:150px;}
+
+.hc_lnav .allbtn ul li .pop{position:absolute; background-color:#ffffff; padding:10px 30px 0px 30px; width:640px; display:none; height:390px; font-family:Arial; left:190px; border-right:1px #dddddd solid; border-bottom:0px #dddddd solid;}
+.hc_lnav .allbtn ul li .pop h3{display:block; font-size:14px}
+.hc_lnav .allbtn ul li .pop dl{ padding:10px 0px 10px 0px; font-size:12px; line-height:25px; border-top:0px #cccccc dotted;}
+.hc_lnav .allbtn ul li .pop dl:hover{background-color:#f3f3f3}
+.hc_lnav .allbtn ul li .pop dt{ font-weight:bold; width:60px;}
+.hc_lnav .allbtn ul li .pop dd{ width:560px; margin-left:-10px;}
+
+.hc_lnav .allbtn:hover ul{display:block}
+.hc_lnav .allbtn ul li:hover{border-left:1px #333333 solid;}
+.hc_lnav .allbtn ul li:hover .tx{color:#333333; background-color:#ffffff;}
+.hc_lnav .allbtn ul li:hover .tx a{color:#333333}
+.hc_lnav .allbtn ul li:hover .tx a i{background-position:0px -25px}
+.hc_lnav .allbtn ul li:hover .pop{display:block;top:0px;left:200px}
+.hc_lnav .allbtn ul li:hover .pop dl a.un{color:#a5a5a5;text-decoration:none}
+.hc_lnav .allbtn ul li:hover dl{color:#333333}
+.hc_lnav .allbtn ul li:hover a{color:#333333}
+.hc_lnav .allbtn ul li:hover a:hover{color:#333333}
+
+
+.topright{ float:right; width:450px; }
+.topright ul { margin:0px; padding:0px; list-style:none; }
+.topright ul li { float:left; padding-top:10px; font-size:12px; color:#666666; width:90px; height:20px; text-align:center; }
+.topright ul li i{ background-image:url(http://www.zushouji.com/images/down.gif); display:inline-block; width:8px; height:6px; }
+
+.topright ul li .my{ position:absolute; display: none; padding:10px 5px 10px 15px; left:750px; top:30px; background:#ffffff; border:1px #eeeeee solid; border-top:0px #cccccc solid; line-height:30px; width:68px; text-align:left; }
+.topright ul li .cart{ position:absolute; display: none; padding:10px 5px 10px 15px; left:840px; top:30px; background:#ffffff; border:1px #eeeeee solid; border-top:0px #cccccc solid; line-height:30px; width:300px; text-align:left; }
+.topright ul li .help{ position:absolute; display: none; padding:10px 5px 10px 15px; left:930px; top:30px; background:#ffffff; border:1px #eeeeee solid; border-top:0px #cccccc solid; line-height:30px; width:68px; text-align:left; }
+.topright ul li .serve{ position:absolute; display: none; padding:10px 5px 10px 15px; left:1020px; top:30px; background:#ffffff; border:1px #eeeeee solid; border-top:0px #cccccc solid; line-height:30px; width:68px; text-align:left; }
+.topright ul li .guide{ position:absolute; display: none; left:0px; top:0px; padding:20px 0px 20px 0px; border:1px #eeeeee solid; border-top:0px #cccccc solid; line-height:30px; background:#ffffff; height:160px; width:1198px; text-align:left; }
+
+.topright ul li:hover{ color:#333333; background-color:#ffffff; border-left:1px #eeeeee solid; border-right:1px #eeeeee solid; width:88px; height:21px; }
+.topright ul li:hover i{ background-image:url(http://www.zushouji.com/images/up.gif); }
+.topright ul li:hover .my{ display: block; top:31px;}
+.topright ul li:hover .cart{ display: block; top:31px;}
+.topright ul li:hover .help{ display: block; top:31px;}
+.topright ul li:hover .serve{ display: block; top:31px;}
+.topright ul li:hover .guide{ display: block; top:31px;}
+
+
+.menu{ position:fixed; top:0px; right:0px; padding-top:197px; border-right:2px #333333 solid; width:35px; height:100%; z-index:1; }
+.menu ul { margin:0px; padding:0px; list-style:none; }
+.menu ul li { margin-top:0px; padding-top:5px; background:#333333; height:30px; text-align:center; }
+.menu ul li .text{ position:relative; display: none; padding-top:12px; top:-30px; right:71px; font-size:12px; background:#ffcc00; width:70px; height:23px; }
+.menu ul li:hover{ color:#333333; background-color:#ffcc00; }
+.menu ul li:hover .text{ display: block; }

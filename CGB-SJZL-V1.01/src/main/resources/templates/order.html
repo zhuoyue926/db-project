@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>确认租机订单 - 神州租手机</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+body {
+	background-color: #f4f4f4;
+}
+</style>
+
+</head>
+<body>
+	<div style="padding: 0px 30px 0px 30px; background: #f5f5f5;">
+		<div class="style23" style="line-height: 30px; height: 30px;">
+			<span id="user"><div class="style23" style="float: left;">17610573732，欢迎您！</div>
+				<div class="style23" style="float: right;">
+					<a href="#" target="_blank"
+						class="style23">我的账户</a> &nbsp; &nbsp; &nbsp; <a
+						href="#" target="_blank"
+						class="style23">我的订单</a> &nbsp; &nbsp; &nbsp; <a
+						href="#" target="_blank"
+						class="style23">我的账单</a> &nbsp; &nbsp; &nbsp; <a
+						href="#" class="style23">退出登录</a>
+				</div></span>
+		</div>
+	</div>
+	<div
+		style="padding: 10px 30px 0px 30px; background: #ffffff; border-bottom: 1px #555555 solid; min-width: 1200px; height: 90px;">
+		<div style="float: left; padding-top: 15px; width: 80px;">
+			<a href="#"> <img
+				src="images/logo.png" width="50" height="50"
+				border="0"
+				style="padding: 2px; background: #00a0e4; border-radius: 5%;"></a>
+		</div>
+		<div class="style19" style="float: left; padding-top: 25px;">确认订单</div>
+		<a href="#" target="_blank" class="style8">
+			<div class="style8"
+				style="float: right; margin-top: 20px; border: 1px #eeeeee solid; background: #f2f2f2; padding-top: 15px; width: 150px; height: 28px; text-align: center;">我的租物车</div>
+		</a>
+	</div>
+
+	<div
+		style="margin-right: auto; margin-left: auto; margin-top: 45px; background: #ffffff; width: 1200px;">
+
+		<div style="padding: 50px 100px 50px 100px;">
+
+			<div class="style31" style="padding: 0px 0px 0px 0px;">收货信息</div>
+			<div id="b2" class="style8"
+				style="display: block; padding: 20px 0px 50px; border-top: 0px solid rgb(255, 187, 0); line-height: 30px;">
+				<form action="#" method="post"
+					name="input" id="input">
+					<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td width="848" height="60"><select name="province"
+									size="1" class="style28" id="province"
+									style="padding: 15px; border: 1px #dddddd solid; width: 100px;"
+									onchange="searchlistcities(this.form);">
+										<option value="" selected="">省份</option>
+										<option value="北京">北京</option>
+										<option value="天津">天津</option>
+										<option value="上海">上海</option>
+										<option value="重庆">重庆</option>
+										<option value="河北省">河北</option>
+										<option value="河南省">河南</option>
+										<option value="黑龙江省">黑龙</option>
+										<option value="吉林省">吉林</option>
+										<option value="辽宁省">辽宁</option>
+										<option value="山东省">山东</option>
+										<option value="内蒙古">内蒙古</option>
+										<option value="江苏省">江苏</option>
+										<option value="安徽省">安徽</option>
+										<option value="山西省">山西</option>
+										<option value="陕西省">陕西</option>
+										<option value="甘肃省">甘肃</option>
+										<option value="浙江省">浙江</option>
+										<option value="江西省">江西</option>
+										<option value="湖北省">湖北</option>
+										<option value="湖南省">湖南</option>
+										<option value="贵州省">贵州</option>
+										<option value="四川省">四川</option>
+										<option value="云南省">云南</option>
+										<option value="新疆">新疆</option>
+										<option value="宁夏">宁夏</option>
+										<option value="青海省">青海</option>
+										<option value="西藏">西藏</option>
+										<option value="广西">广西</option>
+										<option value="广东省">广东</option>
+										<option value="福建省">福建</option>
+										<option value="海南省">海南</option>
+										<option value="台湾省">台湾</option>
+										<option value="香港">香港</option>
+										<option value="澳门">澳门</option>
+								</select>&nbsp; <select name="city"
+									style="padding: 15px; border: 1px #dddddd solid; width: 100px;"
+									class="style28" id="city">
+										<option>城市</option>
+								</select>&nbsp; <input name="road" type="text" class="style28" id="road"
+									placeholder="具体地址"
+									style="padding: 15px; border: 1px #dddddd solid; width: 300px; outline: none;">&nbsp;
+									<input name="name" type="text" class="style28" id="name"
+									placeholder="姓名"
+									style="padding: 15px; border: 1px #dddddd solid; width: 70px; outline: none;">&nbsp;
+									<input name="phone" type="text" class="style28" id="phone"
+									placeholder="手机号码"
+									style="padding: 15px; border: 1px #dddddd solid; width: 120px; outline: none;">&nbsp;
+									<input name="button" type="button" class="style18" id="button"
+									style="background: #00a0e4; border: 0px #eeeeee solid; width: 80px; cursor: pointer; height: 45px;"
+									value="添加"
+									onclick="address_add(document.getElementById(&#39;name&#39;).value,document.getElementById(&#39;phone&#39;).value,document.getElementById(&#39;province&#39;).value,document.getElementById(&#39;city&#39;).value,document.getElementById(&#39;road&#39;).value)">&nbsp;
+									<input onclick="show(&#39;b1&#39;),hidd(&#39;b2&#39;)"
+									name="button" type="button" class="style18" id="button"
+									style="background: #888888; border: 0px #eeeeee solid; width: 80px; cursor: pointer; height: 45px;"
+									value="取消"></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+
+			<form action="#"
+				method="post" name="inputs" id="inputs"
+				onsubmit="return(CheckInputs())">
+				<div id="b1"
+					style="display: none; padding: 20px 50px 30px 0px; border-top: 0px solid rgb(255, 187, 0);">
+					<span id="qp"><div
+							onclick="show(&#39;b2&#39;),hidd(&#39;b1&#39;)" align="center"
+							class="style28"
+							onmouseover="style.backgroundColor=&#39;#f6f6f6&#39;"
+							onmouseout="style.backgroundColor=&#39;#ffffff&#39;"
+							style="padding-top: 20px; border: 1px dashed rgb(221, 221, 221); cursor: pointer; width: 200px; height: 35px; background-color: rgb(255, 255, 255);">添加新地址</div>
+						<div id="lbtn"></div></span>
+				</div>
+
+				<div class="style8"
+					style="background: #; border-top: 1px #eeeeee solid;">
+					<div class="style31" style="padding: 30px 0px 20px 0px;">支付方案</div>
+					<div style="padding-left: 0px; height: 80px;">
+						<div style="float: left; width: 86px; text-align: center;">
+							<input name="order_pay" type="radio" id="m11"
+								style="display: none;" value="1"> <label id="n11"
+								for="m11" onclick="showbg(1,1)"
+								style="display: block; padding-top: 6px; border: 2px #dddddd solid; height: 21px; cursor: pointer;">信用卡</label>
+						</div>
+
+						<div
+							style="float: left; margin-left: 10px; width: 86px; text-align: center; display: none;">
+							<input name="order_pay" type="radio" id="m12"
+								style="display: none;" value="2"> <label id="n12"
+								for="m12" onclick="showbg(1,2)"
+								style="display: block; padding-top: 6px; border: 2px #dddddd solid; height: 21px; cursor: pointer;">储蓄卡</label>
+						</div>
+
+						<div
+							style="float: left; margin-left: 10px; width: 86px; text-align: center;">
+							<input name="order_pay" type="radio" id="m13"
+								style="display: none;" value="3"> <label id="n13"
+								for="m13" onclick="showbg(1,3)"
+								style="display: block; padding-top: 6px; border: 2px #dddddd solid; height: 21px; cursor: pointer;">支付宝</label>
+						</div>
+						<div class="style28"
+							style="float: left; margin-left: 10px; padding-top: 8px;">（信用卡预授权+分期代扣，支付宝预授权+分期代扣，需要在手机上操作）</div>
+					</div>
+				</div>
+
+				<div class="style8"
+					style="background: #; border-top: 1px #eeeeee solid;">
+					<div class="style31" style="padding: 30px 0px 20px 0px;">配送方式</div>
+					<div style="padding-left: 0px; height: 80px;">
+						<div style="float: left; width: 86px; text-align: center;">
+							<input name="order_send" type="radio" id="m21"
+								style="display: none;" value="1" checked=""> <label
+								id="n21" for="m21" onclick="showbg(2,1)"
+								style="display: block; padding-top: 6px; border: 2px #ff9900 solid; background: url(http://www.zushouji.com/images/productall.png) 70px -129px no-repeat; height: 21px; cursor: pointer;">门店配送</label>
+						</div>
+						<div class="style28"
+							style="float: left; margin-left: 10px; padding-top: 8px;">（统一安排门店顺丰配送，安全放心全程免运费）</div>
+					</div>
+				</div>
+
+				<div class="style8"
+					style="background: #; border-top: 1px #dddddd solid;">
+					<div class="style31" style="padding: 30px 0px 0px 0px;">合约租期</div>
+
+					<div style="padding: 20px 0px 0px 0px; height: 80px;">
+
+						<div style="float: left; width: 96px; text-align: center;">
+							<input style="display: none;" type="radio" name="order_long"
+								id="m1" value="12" checked=""> <label id="n1" for="m1"
+								style="display: block; padding-top: 6px; border: 2px #ff9900 solid; background: url(images/productall.png) 80px -129px no-repeat; height: 21px; cursor: pointer;">12
+								月</label>
+						</div>
+
+						<div class="style28"
+							style="float: left; margin-left: 10px; padding-top: 8px;">（分期租机合约期是12个月，租期满后可以选择还机、换机、购机）</div>
+					</div>
+					<div style="padding: 20px 0px 0px 0px; display: none;">
+						<input style="" name="order_type" type="radio" id="radio"
+							value="1" checked="checked"> <span class="style28">（按照日租计价，日租机价是手机市场价格的0.5%-2.0%，遵循租机时间越长，日租价越低的阶梯定价规则）</span>
+					</div>
+				</div>
+
+				<div class="style8" style="border-top: 1px #eeeeee solid;">
+					<div class="style31"
+						style="padding-top: 30px; background: #; height: 35px;">品牌机型</div>
+					<div class="style28"
+						style="padding-top: 15px; border: 1px #eeeeee solid; background: #f6f6f6; height: 30px;">
+						<div style="float: left; width: 120px; text-align: center;">图片</div>
+						<div align="left" style="float: left; width: 200px;">品牌型号</div>
+						<div style="float: left; width: 250px;">颜色版本</div>
+						<div style="float: left; width: 150px;">数量</div>
+						<div align="left" style="float: left; width: 160px;">市场价格</div>
+						<div style="float: right; width: 80px;">库存</div>
+					</div>
+					<span id="mo">
+
+
+						<div class="style8"
+							style="border: 1px #eeeeee solid; border-top: 0px #eeeeee solid; height: 120px;">
+							<div
+								style="float: left; padding-top: 15px; width: 120px; text-align: center;">
+								<img
+									src="images/RbQHAFvHCMCAP2rXAAKiYAeMP1E066.jpg"
+									height="90" border="0">
+							</div>
+							<div align="left"
+								style="float: left; padding: 50px 0px 0px 0px; border-left: 0px #e1e1e1 dotted; width: 200px; height: 45px;">华为
+								Mate 20 Pro</div>
+							<div align="left"
+								style="float: left; padding: 50px 0px 0px 0px; border-left: 0px #e1e1e1 dotted; width: 250px; height: 45px;">
+								金色 全网通 128G</div>
+							<div
+								style="float: left; padding-top: 50px; border-left: 0px #e1e1e1 dotted; width: 150px; height: 45px;">1
+								部</div>
+							<div class="style27"
+								style="float: left; padding-top: 50px; border-left: 0px #e1e1e1 dotted; width: 100px; height: 45px;">
+								¥ 6499.00</div>
+							<div class="style25"
+								style="float: right; padding-top: 50px; border-left: 0px #e1e1e1 dotted; width: 80px; height: 45px;">
+								<span class="style28">有货</span>
+							</div>
+						</div>
+
+						<div id="lbtn"></div>
+					</span>
+				</div>
+
+				<div class="style8"
+					style="padding: 30px 0px 0px 0px; line-height: 35px; height: 150px;">
+					<div style="float: left; width: 300px;"></div>
+					<div style="float: right; width: 300px;">
+						机型数量： <span class="style27">1</span> 款 <span class="style27">1</span>
+						部<br> 信用额度： <span class="style27">¥ 6499.00</span> <span
+							class="style24">（信用预授权）</span><br> 每期账单： <span
+							class="style27">¥ <span id="pr">361</span>.00
+						</span> <span class="style24">（账单分期扣款）</span>
+					</div>
+				</div>
+
+				<div
+					style="padding-top: 20px; border-top: 1px #eeeeee solid; height: 100px;">
+					<div class="style28"
+						style="float: left; padding-top: 18px; width: 500px;">
+						<input name="checkbox" type="checkbox" id="checkbox">
+						我已阅读并同意 <a href="#"
+							target="_blank" class="style10">《神州租机合同协议条款》</a>
+					</div>
+					<input name="order_mobile" type="hidden" id="order_mobile"
+						value="1218"> <input name="mobile_num" type="hidden"
+						id="mobile_num" value="1,"> <input name="order_model"
+						type="hidden" id="order_model" value="华为 Mate 20 Pro"> <input
+						name="order_price" type="hidden" id="order_price" value="6499">
+					<div align="center" style="float: right; width: 300px;">
+						<span id="load"><input
+							onmouseover="style.backgroundColor=&#39;#00a0e4&#39;"
+							onmouseout="style.backgroundColor=&#39;#00a0e4&#39;"
+							name="button" type="submit" class="style18" id="button"
+							style="display: block; background: #00a0e4; border: 0px #dddddd solid; cursor: pointer; width: 300px; height: 60px;"
+							value="提交租机订单"> </span>
+					</div>
+
+				</div>
+			</form>
+
+		</div>
+
+	</div>
+	<div style="margin-top: 100px; background: #ffffff;">
+		<div class="style30"
+			style="margin-right: auto; margin-left: auto; padding-top: 30px; border-bottom: 1px #eeeeee solid; line-height: 50px; width: 1200px; height: 70px;">
+			<div
+				style="float: left; padding-left: 50px; width: 25%; height: 60px;">
+				<img src="images/icon_pc.png" width="30" height="30"
+					align="absmiddle"> 以租代购
+			</div>
+			<div
+				style="float: left; padding-left: 0px; width: 25%; height: 60px;">
+				<img src="images/icon_money.png" width="30"
+					height="30" align="absmiddle"> 零元首付
+			</div>
+			<div
+				style="float: left; padding-left: 0px; width: 25%; height: 60px;">
+				<img src="images/icon_datepicker.png" width="30"
+					height="30" align="absmiddle"> 分期付费
+			</div>
+			<div
+				style="float: left; padding-left: 0px; width: 20%; height: 60px;">
+				<img src="images/icon_protect.png" width="30"
+					height="30" align="absmiddle"> 免赔保障
+			</div>
+		</div>
+	</div>
+	<div style="background: #ffffff;">
+		<div
+			style="margin-left: auto; margin-right: auto; padding-top: 30px; border-bottom: 1px #eeeeee solid; line-height: 35px; width: 1200px; height: 180px;">
+			<div style="float: left; padding-left: 50px; width: 180px;">
+				<span class="style11">业务介绍</span><br>
+				<a href="#" class="style28"
+					target="_blank">以租代购</a><br>
+				<a href="#" class="style28"
+					target="_blank">租机业务</a><br>
+				<a href="#" class="style28"
+					target="_blank">租机品牌</a>
+			</div>
+			<div style="float: left; width: 180px;">
+				<span class="style11">信用额度</span><br>
+				<a href="#" class="style28"
+					target="_blank">获得额度</a><br>
+				<a href="#" class="style28"
+					target="_blank">使用额度</a><br>
+				<a href="#" class="style28"
+					target="_blank">提高额度</a>
+			</div>
+			<div style="float: left; width: 180px;">
+				<span class="style11">分期支付</span><br>
+				<a href="#" class="style28"
+					target="_blank">信用卡</a><br>
+				<a href="#" class="style28"
+					target="_blank">储蓄卡</a><br>
+				<a href="#" class="style28"
+					target="_blank">支付宝</a><br>
+			</div>
+			<div style="float: left; width: 180px;">
+				<span class="style11">账单还款</span><br>
+				<a href="#" class="style28"
+					target="_blank">扣款周期</a><br>
+				<a href="#" class="style28"
+					target="_blank">还款时间</a><br>
+				<a href="#" class="style28"
+					target="_blank">还款周期</a><br>
+			</div>
+			<div
+				style="float: left; border-right: 1px #eeeeee solid; width: 150px; height: 150px;">
+				<span class="style11">换机购机</span><br>
+				<a href="#" class="style28"
+					target="_blank">如何还机</a><br>
+				<a href="#" class="style28"
+					target="_blank">如何换机</a><br>
+				<a href="#" class="style28"
+					target="_blank">如何购机</a>
+			</div>
+			<div class="style25"
+				style="float: right; padding-top: 0px; width: 220px;">
+				<img src="images/alipay.png" width="110"
+					height="110"><img src="images/weixin.png"
+					width="110" height="110"><br>关注神州租机支付宝生活号和微信公众号
+			</div>
+		</div>
+	</div>
+	<div align="center" class="style25"
+		style="padding-top: 30px; background: #ffffff; line-height: 25px; height: 80px;">
+		<a href="#" target="_blank"
+			class="style25">公司介绍</a> &nbsp; | &nbsp; <a
+			href="#" target="_blank"
+			class="style25">旗下网站</a> &nbsp; | &nbsp; <a
+			href="#" target="_blank"
+			class="style25">业务体系</a> &nbsp; | &nbsp; <a
+			href="#" target="_blank"
+			class="style25">门店计划</a> &nbsp; | &nbsp; <a
+			href="#" target="_blank"
+			class="style25">联系我们</a> &nbsp; | &nbsp; <a
+			href="#" target="_blank" class="style25">帮助中心</a><br>
+		<span> Copyright © 2016-2019 ZUSHOUJI.COM All Rights Reserved
+			神州租机 版权所有 京ICP备16068806号</span>
+	</div>
+
+
+</body>
+</html>

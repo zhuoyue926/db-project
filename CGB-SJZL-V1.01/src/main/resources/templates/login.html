@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>用户登录 - 神州租手机</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<style type="text/css"> 
+
+	body { background-color: #f6f6f6; }
+
+</style>
+
+</head>
+
+<body>
+<div style="background:#ffffff; border-bottom:0px #eeeeee solid;">
+<div style="margin-left:auto; margin-right:auto; padding-top:0px; width:1200px; height:80px;">
+<div style="float:left; padding-top:10px;"><img src="images/logo.png" width="50" height="50" style="padding:2px; background:#00a0e4; border-radius:5%;"></div>
+</div>
+</div>
+
+<div style="padding-top:50px; background:url(images/1555643633422.jpg); background-size:cover; background-position: center; width:100%; height:450px;">
+<div style="margin-left:auto; margin-right:auto; width:1200px; height:400px;">
+<div style="float:right; padding:20px 50px 10px 50px; background:#ffffff; border-right:1px #eeeeee solid; width:330px; height:350px;">
+<div class="style31" style="padding-top:15px; height:30px;">用户登录</div>
+<div style="padding:20px 0px 0px 0px; border:0px #f7f7f7 solid;">
+<form action="#" method="post" name="input" id="input" onsubmit="return(CheckInput())">
+    <p id="login-box-msg">请输入手机号和密码</p>
+    <div class="style23" style="padding-top:10px;">
+      <input style="padding:15px; border:1px #dddddd solid; width:300px; outline:none;" name="user_name" type="text" class="style8" 
+      id="user_name" placeholder="手机号码" size="40" maxlength="20">
+    </div>
+    <div class="style23" style="padding-top:20px;">
+      <input style="padding:15px; border:1px #dddddd solid; width:300px; outline:none;" name="user_password" type="password" 
+      class="style8" id="user_password" placeholder="登录密码" size="40" maxlength="20">
+    </div>
+    <div id="qp" class="style23" style="padding-top:10px;">
+    </div>
+<div class="style11" style="padding-top:10px; height:50px;"><span id="login"><input name="button"  type="button" class="style18" 
+id="button" style="background:#00a0e4; border:0px #dddddd solid; border-radius:5px; cursor:pointer; width:330px; height:50px; 
+outline:none;" value="用户登录"></span>
+</div>
+<div class="style23" style="padding-top:20px; text-align:center;">还不是神州用户？ <a href="#" class="style5">用户注册</a> &nbsp; &nbsp;
+您是企业用户？ <a href="#" class="style5">企业登录</a>
+</div>
+    </form>
+</div>
+</div>
+</div>
+</div>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+
+	//以下为用户名登录相关代码/对登录按钮注册点击事件
+
+/*     function validation(){
+    var params = {};
+    params.username = $("#user_name").val();
+    params.password = $("#user_password").val();
+    $.ajax({
+        type:"GET",
+        url:"/Login/doLoginUser",
+        data:params,
+        dataType:"json",
+        success:function(data){
+            //alert(data);
+        },
+        error:function(data){
+            //alert(data)
+        }
+    })
+} */
+$(function(){
+	
+	$(".style18").click(doLogin);
+/* 		var username=$("#user_name").val();
+	if(username.length<6){$("#login-box-msg").html("请输入6-10长度的用户名")} */
+});
+function doLogin(){
+	var params={
+			username:$("#user_name").val(),
+			password:$("#user_password").val()
+	}
+
+	 //alert(params);
+	var url="user/doLogin";
+	//console.log("params",params);
+	$.post(url,params,function(result){
+		console.log(result);
+		if(result.state==1){
+			//跳转到首页
+			// $("#login-box-msg").html(result.message); 
+				//alert("注册成功，为您跳转登录页面");
+			location.href="doIndexUI?t="+Math.random();
+		}else{
+			 $("#login-box-msg").html(result["message"]); 
+			//console.log(result.message);
+			//alert(result.message);
+		}
+		// return false;//防止刷新时重复提交 
+	});
+}
+</script>
+
+<div align="center" class="style24" style="padding-top:30px; line-height:25px; height:80px;">
+	<a href="#" target="_blank" class="style23">公司介绍</a>
+	 |&nbsp; 
+	<a href="#" target="_blank" class="style23">旗下产品</a>
+	 |&nbsp; <a href="#" target="_blank" class="style23">业务体系</a>
+	 |&nbsp; <a href="#" target="_blank" class="style23">发展历程</a>
+	 |&nbsp; <a href="#" target="_blank" class="style23">联系我们</a>
+	 |&nbsp; <a href="#" target="_blank" class="style23">门店计划</a>
+	 |&nbsp; <a href="#" target="_blank" class="style23">租机帮助</a>
+	 <br>
+	 <span class="style0"> Copyright  2011-2016 , ZUSHOUJI.COM All Rights Reserved 神州租机 版权所有 京ICP备16068806号</span>
+</div>
+
+
+</body></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>注册成功 - 神州租手机</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	body { background-color: #eeeeee; }
+</style>
+</head>
+<body>
+<div style="margin-left:auto; margin-right:auto; margin-top:80px; background:#ffffff; width:1000px; height:500px;">
+<div class="style19" style="padding-top:100px; text-align:center;"><img src="images/ok.jpg" width="60" height="60"><br><br>注册成功</div>
+<div align="center" class="style28" style="padding:20px 0px 50px 0px;">您已注册成功即将登录会员账户</div>
+<!-- <div style="text-align:center;"><a class="style5" href="#"><span id="login"><input name="button" type="submit" class="style18" id="button" 
+style="padding-top:0px; background:#00a0e4; border:0px #dddddd solid; cursor:pointer; 
+width:300px; height:50px;" value="登录我的账户"></span></a></div> -->
+<div class="box" >
+    <h2  style="text-align:center; ">剩余时间：<span class="clock">3</span>秒跳转到首页</h2>
+</div>
+</div>
+
+<div align="center" class="style24" style="padding-top:30px; line-height:25px; height:80px;"><a href="#" target="_blank" class="style23">公司介绍</a> |&nbsp; <a href="#" target="_blank" class="style23">旗下产品</a> |&nbsp; <a href="#" target="_blank" class="style23">业务体系</a> |&nbsp; <a href="#" target="_blank" class="style23">发展历程</a> |&nbsp; <a href="#" target="_blank" class="style23">联系我们</a> |&nbsp; <a href="#" target="_blank" class="style23">门店计划</a> |&nbsp; <a href="#" target="_blank" class="style23">租机帮助</a><br><span class="style0"> Copyright  2011-2016 , ZUSHOUJI.COM All Rights Reserved 神州租机 版权所有 京ICP备16068806号</span></div>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+	
+	var t=3;
+	var time = document.getElementsByClassName("clock")[0];
+	function fun() {
+		t--;
+		time.innerHTML = t;
+		if(t <= 0) {
+			location.href="doIndexUI?t="+Math.random();
+			clearInterval(inter);
+		}
+	}
+	var inter = setInterval("fun()", 1000);
+</script>
+
+</body></html>

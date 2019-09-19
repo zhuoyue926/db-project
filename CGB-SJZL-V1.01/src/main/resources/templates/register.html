@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>用户注册 - 神州租手机</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<style type="text/css"> 
+
+	body { background-color: #eeeeee; }
+
+</style>
+
+</head>
+<body>
+<div style="margin-left:auto; margin-right:auto; margin-top:80px; padding-top:50px; background:#ffffff; width:1000px; height:450px;">
+<div style="float:left; padding:0px 0px 10px 100px; border-right:0px #eeeeee solid; width:450px;">
+    <form action="" method="post" name="frm" id="input" onsubmit="return(CheckInput())">
+    <div class="style31" style="padding-top:0px; height:30px;">用户注册</div>
+    <p id="login-box-msg">请输入用户名和密码</p>
+    <div class="style25" style="padding-top:0px;">
+        <input style="padding: 15px; border: 1px solid rgb(219, 219, 219); width: 300px; outline: none;" name="username" 
+        type="text" class="style28" id="username" placeholder="用户名" size="30" maxlength="20" onblur="checkUsername()">
+ <!--    &nbsp; <span id="chkUser"><img src="images/li_err.gif">手机</span> -->
+    &nbsp; <span id="chkUser"></span>
+    </div>
+    <div class="style25" style="padding-top:10px;">
+      <input style="padding: 15px; border: 1px solid rgb(219, 219, 219); width: 300px; outline: none;" name="user_password1" type="password" 
+      class="style28" id="user_password1" onblur="checkPassWord()" 
+      placeholder="登录密码" size="30" maxlength="20"> 
+    &nbsp; <span id="chkPas"></span>
+    </div>
+    <div style="padding-left:0px;"><table cellpadding="0" id="pwd_div_27269_table" cellspacing="0" 
+    style="width:210px;height:16px;"><tbody><tr><td id="pwd_div_27269_td_0" width="33%" 
+    align="center" style="background-color: rgb(235, 235, 235); border-left: 1px solid rgb(255, 255, 255); border-right: 1px solid rgb(190, 190, 190); 
+    border-bottom: 1px solid rgb(190, 190, 190);"><span style="font-size:1px">&nbsp;</span><span id="pwd_div_27269_label_0" style="display:none;
+    font-family: Courier New, Courier, mono;font-size: 12px;color: #000000;">弱</span></td><td id="pwd_div_27269_td_1" width="33%" 
+    align="center" style="background-color: rgb(235, 235, 235); border-left: 1px solid rgb(255, 255, 255); border-right: 1px solid rgb(190, 190, 190); border-bottom: 1px solid rgb(190, 190, 190);"><span style="font-size:1px">&nbsp;</span><span id="pwd_div_27269_label_1" style="display:none;font-family: Courier New, Courier, mono;font-size: 12px;color: #000000;">中</span></td><td id="pwd_div_27269_td_2" width="33%" align="center" style="background-color: rgb(235, 235, 235); border-left: 1px solid rgb(255, 255, 255); border-right: 1px solid rgb(190, 190, 190); border-bottom: 1px solid rgb(190, 190, 190);"><span style="font-size:1px">&nbsp;</span><span id="pwd_div_27269_label_2" style="display:none;font-family: Courier New, Courier, mono;font-size: 12px;color: #000000;">强</span></td></tr></tbody></table></div>
+   	 <div class="style25" style="padding-top:10px;">
+      <input style="padding: 15px; border: 1px solid rgb(219, 219, 219); width: 300px; 
+      outline: none;" name="user_password2" type="password" class="style28" id="user_password2" 
+      onblur="checkPassWord()" 
+      placeholder="确认密码" size="30" maxlength="20">
+      </div>
+      
+      
+      
+<div class="style24" style="padding-top:10px;">
+        <select name="optprovince" onChange="changecity()" size="1" class="style28" id="province" style="padding:15px; border:1px #dddddd solid; width:165px; outline:none;" onblur="style.borderColor=&#39;#dddddd&#39;">
+<option>所在省份</option>
+<option value="北京">北京</option><option value="天津">天津</option><option value="上海">上海</option><option value="重庆">重庆</option><option value="河北省">河北</option><option value="河南省">河南</option><option value="黑龙江省">黑龙</option><option value="吉林省">吉林</option><option value="辽宁省">辽宁</option><option value="山东省">山东</option><option value="内蒙古">内蒙古</option><option value="江苏省">江苏</option><option value="安徽省">安徽</option><option value="山西省">山西</option><option value="陕西省">陕西</option><option value="甘肃省">甘肃</option><option value="浙江省">浙江</option><option value="江西省">江西</option><option value="湖北省">湖北</option><option value="湖南省">湖南</option><option value="贵州省">贵州</option><option value="四川省">四川</option><option value="云南省">云南</option><option value="新疆">新疆</option><option value="宁夏">宁夏</option><option value="青海省">青海</option><option value="西藏">西藏</option><option value="广西">广西</option><option value="广东省">广东</option><option value="福建省">福建</option><option value="海南省">海南</option><option value="台湾省">台湾</option><option value="香港">香港</option><option value="澳门">澳门</option>
+        </select>
+<select name="optcity" style="padding:15px; border:1px #dddddd solid; width:160px; outline:none;" class="style28" id="city" onblur="style.borderColor=&#39;#dddddd&#39;">
+                <option>所在城市</option>
+</select>
+</div> 
+    
+    
+    
+    <div class="style25" style="padding-top:10px;">
+      <input style="padding:15px; border:1px #dddddd solid; width:300px; outline:none;"
+       name="useremail" type="text" class="style28" id="useremail" placeholder="电子邮箱" size="30" maxlength="30" onblur="checkEmail()"> 
+    &nbsp; <span id="chkEmail"></span>
+    </div>
+          <div style="padding:15px 0px 0px 0px;">
+        <span id="login">
+        <input name="button" type="button" class="style18" 
+          id="button" style="background:#00a0e4; border:0px #dddddd solid; border-radius:5px; 
+          cursor:pointer; width:330px; 
+          height:50px; outline:none;" value="用户注册"></span>
+    </div>
+  </form>
+</div>
+<div class="style28" style="float:left; padding:0px 0px 0px 0px; width:400px;">
+<div style="padding:20px 0px 50px 15px; line-height:35px;">已是神州用户？ <a href="#" class="style10">会员登录</a><br>您是企业用户？ <a href="#" class="style10">企业注册</a></div>
+<div style="padding:0px 0px 10px 15px;">关注神州租机的支付宝生活号和微信公众号</div>
+<div style="border-bottom:0px #eeeeee solid;"><img src="images/alipay.png" width="200" height="200"><img src="images/weixin.png" width="200" height="200"></div>
+</div>
+</div>
+<div align="center" class="style24" style="padding-top:30px; line-height:25px; height:80px;"><a href="#" target="_blank" class="style23">公司介绍</a> |&nbsp; <a href="#" target="_blank" class="style23">旗下产品</a> |&nbsp; <a href="#" target="_blank" class="style23">业务体系</a> |&nbsp; <a href="#" target="_blank" class="style23">发展历程</a> |&nbsp; <a href="#" target="_blank" class="style23">联系我们</a> |&nbsp; <a href="#" target="_blank" class="style23">门店计划</a> |&nbsp; <a href="#" target="_blank" class="style23">租机帮助</a><br><span class="style0"> Copyright  2011-2016 , ZUSHOUJI.COM All Rights Reserved 神州租机 版权所有 京ICP备16068806号</span></div>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+/* 以下为验证用户名是否已被使用 */
+ function checkUsername(){
+	//1.获取手机号
+ 	var username = $("#username").val().trim();
+   var patrn = /^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(18[0-9]{1})|(19[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+	//2.判断用户名是否为空
+   	 if( username == "" ){
+		return $("#login-box-msg").html("手机号不能为空!");
+	}
+	if(!patrn.exec(username)){
+		return $("#login-box-msg").html("手机号格式不正确!");
+		
+	}  
+	//手机号正则校验
+ 	function checkMobile (str) {
+    if (!patrn.exec(str.trim())) {
+        return false;
+    }
+    return true;
+} 
+  	 //3.利用AJAX校验手机号是否存在数据库
+  	$.ajax({
+		"url" : "/user/findUserName",
+		"type" : "POST",
+		"data" : {"username" : username},
+		"dataType" : "json",
+		"success" : function(result){
+			//console.log(result);
+				//设置提示消息到id为err-msg的div中
+		$("#login-box-msg").html(result["message"]);
+		}
+	});
+}
+ function checkPassWord(){
+	var password1 = $("#user_password1").val().trim();
+	var password2 = $("#user_password2").val().trim();
+	if(password1.length<5){
+		$("#login-box-msg").html("请输入5位以上密码");
+		return;
+	}
+  	if(password2.length==0){
+  		$("#login-box-msg").html("请再次输入密码");
+		return;
+  	}
+  	    if(password1 != password2){
+  	      $("#login-box-msg").html("两次输入的密码不一致");
+  	      return;
+  	    }
+  	    if(password1 == password2){
+  	      $("#login-box-msg").html("密码一致");
+  	      return;
+  	    }
+}
+
+/* 以下为验证邮箱是否已被使用 */
+ function checkEmail(){
+	//1.获取邮箱
+	var useremail = $("#useremail").val().trim();
+	console.log(useremail);
+	//2.判断邮箱是否为空
+   	if( useremail == "" ){
+		$("#login-box-msg").html("请输入邮箱号");
+		return;
+	}    
+	//3.利用AJAX校验Email是否存在
+  	$.ajax({
+		"url" : "/user/findEmail",
+		"type" : "POST",
+		"data" : {"email" : useremail},
+		"dataType" : "json",
+		"success" : function(result){
+			//console.log(result);
+				//设置提示消息到id为err-msg的div中
+			$("#login-box-msg").html(result["message"])
+			return;
+		} 
+	});
+}
+
+  
+
+/* 以下为用户名注册代码 */
+	$(function(){
+		
+		$(".style18").click(doLogin);
+/* 		var username=$("#user_name").val();
+		if(username.length<6){$("#login-box-msg").html("请输入6-10长度的用户名")} */
+	});
+	function doLogin(){
+		
+		var params={
+				username:$("#username").val(),
+				password:$("#user_password1").val(),
+				password2:$("#user_password2").val(),
+				province:$("#province").val(),
+				city:$("#city").val(),
+				email:$("#useremail").val()
+		}
+	console.log(params);
+		 //alert(params);
+		var url="user/doSaveUser";
+		//console.log("params",params);
+		$.post(url,params,function(result){
+			console.log(result);
+			if(result.state==1){
+				//跳转到首页
+				 $("#login-box-msg").html(result.message); 
+					//alert("注册成功，为您跳转登录页面");
+				location.href="doRegisterOkUI?t="+Math.random();
+			}else{
+				 $("#login-box-msg").html(result.message); 
+				//alert(result.message);
+			}
+			// return false;//防止刷新时重复提交 
+		});
+	}
+	/* 以下全到底全是城市二级联查相关代码 */
+	//创建一个二维数组
+	    var acity=new Array();
+	    acity[0]=new Array();
+	    acity[1]=new Array();
+	    acity[2]=new Array();
+	    acity[3]=new Array();
+	//给二维数组赋值
+	    acity[0][0]="---请选择---";
+	    acity[1][0]="---请选择---";
+	    acity[1][1]="东城区";
+	    acity[1][2]="西城区";
+	    acity[1][3]="崇文区";
+	    acity[1][4]="宣武区";
+	    acity[1][5]="朝阳区";
+	    acity[1][6]="丰台区";
+	    acity[1][7]="石景山区";
+	    acity[1][8]="海淀区";
+	    acity[1][9]="门头沟区";
+	    acity[1][10]="房山区";
+	    acity[1][11]="通州区";
+	    acity[1][12]="顺义区";
+	    acity[1][13]="昌平区";
+	    acity[1][14]="大兴区";
+	    acity[1][15]="怀柔区";
+	    acity[1][16]="平谷区";
+	    acity[2][0]="---请选择---";
+	    acity[2][1]="长沙市";
+	    acity[2][2]="湘潭市";
+	    acity[2][3]="株洲市";
+	    acity[3][0]="---请选择---";
+	    acity[3][1]="合肥市";
+	    acity[3][2]="芜湖市";
+	    acity[3][3]="安庆市";
+	    function changecity()
+	    {
+	        var provinceIndex;//省份下标
+	        provinceIndex=document.frm.optprovince.selectedIndex;
+	        icitycount=0;//城市下标
+	        while(acity[provinceIndex][icitycount]!=null)
+	        icitycount++;//计算选定省份的城市个数
+	        document.frm.optcity.length=icitycount;//改变下拉菜单的选项数
+	        for(var i=0;i<icitycount;i++)//改变下拉菜单的内容
+	        document.frm.optcity[i]=new Option(acity[provinceIndex][i]);
+	        document.frm.optcity.focus();    
+	        console.log(document.frm.optprovince.value);//获取下拉款选项的值,一般这个值需要发送给后端
+	        console.log(document.frm.optcity.value);//获取下拉款选项的值，一般这个值需要发送给后端
+	    }
+</script>
+</body>
+</html>
