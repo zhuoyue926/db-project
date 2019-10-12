@@ -37,5 +37,6 @@ public class Emp implements Comparable {
         }
         throw new ClassCastException("不能转换为Emp类型的对象...");
     }
+   
 
 }

@@ -29,17 +29,6 @@ public class TestListSort {
             System.out.println(o);
         }
     }
-	@BeforeClass
-    public static void init1(){
-       // list1.add(5,9,54,2);
-        list1.add(new Emp("jack",20));
-        list1.add(new Emp("rose",15));
-        list1.add(new Emp("jerry",17));
-        System.out.println("排序前:");
-        for(Object o : list){
-            System.out.println(o);
-        }
-    }
 
     /**按age升序排序*/
 @SuppressWarnings("unchecked")
@@ -53,7 +42,8 @@ public class TestListSort {
   }
   
     /**按name升序排序*/
-    @Test
+    @SuppressWarnings("unchecked")
+	@Test
     public void testSortName(){
         Collections.sort(list);
         System.out.println("自然排序按name升序排序后:");
@@ -63,6 +53,7 @@ public class TestListSort {
     }
 
     /**使用Comparator比较器按age升序排序*/
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Test
     public void testComparatorSortAge(){
         Collections.sort(list,new Comparator () {
@@ -85,21 +76,21 @@ public class TestListSort {
     @SuppressWarnings("unchecked")
 	@Test
     public void testComparatorSortName(){
-        Collections.sort(list,new Comparator () {
-            @Override
-            public int compare(Object o1, Object o2) {
-                if(o1 instanceof Emp && o2 instanceof Emp){
-                    Emp e1 = (Emp) o1;
-                    Emp e2 = (Emp) o2;
-                    return e1.getName().compareTo(e2.getName());
-                }
-                throw new ClassCastException("不能转换为Emp类型");
-            }
-        });
-        System.out.println("使用Comparator比较器按name升序排序后:");
-        for(Object o : list){
-            System.out.println(o);
-        }
-    }
+        Collections.sort(list,new Comparator() {
 
+			@Override
+			public int compare(Object o1, Object o2) {
+				if(o1 instanceof Emp && o2 instanceof Emp) {
+					Emp e1 = (Emp) o1;
+					Emp e2 = (Emp) o2;
+					
+					return e1.getName().compareTo(e2.getName());
+				}
+				throw new ClassCastException("不能转换为Emp类型");
+			}
+		});
+        for (Object object : list) {
+			System.out.println(object);
+		}
+}
 }
