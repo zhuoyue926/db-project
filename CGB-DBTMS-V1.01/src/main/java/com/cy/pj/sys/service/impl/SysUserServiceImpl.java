@@ -28,14 +28,11 @@ import com.cy.pj.sys.vo.SysUserDeptVo;
 ,isolation = Isolation.READ_COMMITTED,
  timeout =30,propagation = Propagation.REQUIRED)
 @Service
-public class SysUserServiceImpl 
-       extends BasePageService<SysUserDeptVo> 
-       implements SysUserService {
+public class SysUserServiceImpl extends BasePageService<SysUserDeptVo> implements SysUserService {
 	 private SysUserDao sysUserDao;
 	 private SysUserRoleDao sysUserRoleDao;
 	 @Autowired
-	 public SysUserServiceImpl(SysUserDao sysUserDao,
-			 SysUserRoleDao sysUserRoleDao) {
+	 public SysUserServiceImpl(SysUserDao sysUserDao,SysUserRoleDao sysUserRoleDao) {
 		 super(sysUserDao);
 		 this.sysUserDao=sysUserDao;
 		 this.sysUserRoleDao=sysUserRoleDao;
